@@ -1,0 +1,13 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+
+# Serve index page from public directory
+GET     /                           controllers.FrontendController.index()
+
+GET     /clubs                      controllers.LeagueController.getClubs()
+GET     /matches                      controllers.LeagueController.getMatches()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
